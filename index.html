@@ -52,6 +52,8 @@
     }
     dd {
         padding-left: 3em;
+        widows: 3;
+        orphans: 2;
     }
     dt::after {
         content: ": ";
@@ -88,6 +90,11 @@
             <div class="caption
                         col-xs-12 col-sm-6 col-sm-offset-3 text-center">
                 <h1>Kit Grids</h1>
+                <select class="form-control person-picker">
+                    <option value="ben-doherty.html" selected>Ben Doherty</option>
+                    <option value="irina-belova.html" >Irina Belova</option>
+                    <option value="another-person.html">Another Person</option>
+                </select>
             </div>
         </div>
     </header>
@@ -107,12 +114,20 @@
             $(".ben." + $(this).context.id).toggleClass("highlighted");
             console.log("clicked " + $(this).context.id);
         };
-        $(".person").load("ben-doherty.html",
-          function(){
+
+        function reRegisterEvents() {
             console.log("loaded");
             $("path").click(activateText);
             $("rect").click(activateText);
+        };
+
+        $(".person").load("ben-doherty.html", reRegisterEvents);
+
+        $(".person-picker").change(function(){
+          console.log($(this).context.value);
+          $(".person").load($(this).context.value, reRegisterEvents);
         });
+
     });
     </script>
     <!-- <script async src="js/useful.js"></script>-->
