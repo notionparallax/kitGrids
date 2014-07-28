@@ -102,20 +102,17 @@
     <!--end container-->
     <script>
     $(document).ready(function() {
-        $(".person").load("ben-doherty.html");
-        console.log("loaded");
-    });
-    $("hello-mum").ready(function() {
-      console.log("hello-mum");
-      
-      window.activateText = function() {
+        function activateText() {
             $("*").removeClass("highlighted");
             $(".ben." + $(this).context.id).toggleClass("highlighted");
             console.log("clicked " + $(this).context.id);
         };
-
-        $("path").click(activateText);
-        $("rect").click(activateText);
+        $(".person").load("ben-doherty.html",
+          function(){
+            console.log("loaded");
+            $("path").click(activateText);
+            $("rect").click(activateText);
+        });
     });
     </script>
     <!-- <script async src="js/useful.js"></script>-->
