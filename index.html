@@ -103,8 +103,10 @@
     <script>
     $(document).ready(function() {
         $(".person").load("ben-doherty.html");
+        console.log("loaded");
     });
     $("hello-mum").ready(function() {
+      console.log("hello-mum");
         function activateText() {
             $("*").removeClass("highlighted");
             $(".ben." + $(this).context.id).toggleClass("highlighted");
