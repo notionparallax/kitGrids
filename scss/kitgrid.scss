@@ -1,0 +1,43 @@
+path, rect {
+    fill: none;
+    stroke: none;
+    pointer-events: all;
+}
+path:hover, rect:hover {
+    fill: rgba(255, 210, 0, 0.3);
+    stroke: rgba(255, 210, 0, 1);
+}
+dd {
+    padding-left: 3em;
+    widows: 3;
+    orphans: 2;
+}
+dt::after {
+    content: ": ";
+}
+.highlighted {
+    border: 1px solid red;
+    color: red;
+}
+.items {
+    -webkit-column-width: 20em;
+    -moz-column-width: 20em;
+    -o-column-width: 20em;
+    column-width: 20em;
+}
+.interview {
+    margin-top: 3em;
+}
+.kit-grid {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: inherit;
+}
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 80%;
+}
