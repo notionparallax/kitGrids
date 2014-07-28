@@ -107,11 +107,12 @@
     });
     $("hello-mum").ready(function() {
       console.log("hello-mum");
-        function activateText() {
+      
+      window.activateText = function() {
             $("*").removeClass("highlighted");
             $(".ben." + $(this).context.id).toggleClass("highlighted");
             console.log("clicked " + $(this).context.id);
-        }
+        };
 
         $("path").click(activateText);
         $("rect").click(activateText);
