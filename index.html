@@ -158,11 +158,15 @@
                       <dd>Gush about how amazing it is...</dd>
                       <dt class="ben towel">Hotel towel</dt>
                       <dd>Gush about how amazing it is...</dd>
+                      <dt class="ben rope">RX rope with spare cables</dt>
+                      <dd>Gush about how amazing it is...</dd>
                       <dt class="ben charger">UE charger</dt>
                       <dd>Gush about how amazing it is...</dd>
                       <dt class="ben wallet">...Lab tyvec</dt>
                       <dd>Gush about how amazing it is...</dd>
                       <dt class="ben watch">Timex easy reader</dt>
+                      <dd>Gush about how amazing it is...</dd>
+                      <dt class="ben pen">Paint marker</dt>
                       <dd>Gush about how amazing it is...</dd>
                       <dt class="ben keys">Keys</dt>
                       <dd>Gush about how amazing it is...</dd>
@@ -185,7 +189,7 @@
                       <dt>another question</dt>
                       <dd>Gush about how amazing it is...</dd>
                       <dt>another question</dt>
-                      <dd>Gush about how amazing it is...</dd>
+                      <dd>Gush about how amazing  it is...</dd>
                     </dl>
                 </div>
             </div>
@@ -196,6 +200,7 @@
     <script>
     $(document).ready(function(){
         function activateText(){
+            $("*").removeClass("highlighted");
             $(".ben."+$(this).context.id).toggleClass("highlighted");
             console.log();
         }
