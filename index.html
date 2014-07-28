@@ -60,30 +60,7 @@
         </div>
     </div>
     <!--end container-->
-    <script>
-    $(document).ready(function() {
-        function activateText() {
-            $("*").removeClass("highlighted");
-            $(".ben." + $(this).context.id).toggleClass("highlighted");
-            console.log("clicked " + $(this).context.id);
-        };
-
-        function reRegisterEvents() {
-            console.log("loaded");
-            $("path").click(activateText);
-            $("rect").click(activateText);
-        };
-
-        $(".person").load("ben-doherty.html", reRegisterEvents);
-
-        $(".person-picker").change(function(){
-          console.log($(this).context.value);
-          $(".person").load($(this).context.value, reRegisterEvents);
-        });
-
-    });
-    </script>
-    <!-- <script async src="js/useful.js"></script>-->
+     <script async src="js/useful.js"></script>
     <!-- <script async src="bootstrap-helper.js"></script> -->
     <script>
     // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
