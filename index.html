@@ -21,62 +21,68 @@
     <!-- <link type="text/css" rel="stylesheet" href="note.css"> -->
 
     <!-- snippets -->
-      <!-- FB snippet stuff -->
-      <meta property="og:title" content="PostedNot.es" />
-      <meta property="og:type" content="website" />
-      <meta property="og:image" content="http://postednot.es/img/write-a-note.png" />
-      <meta property="og:url" content="http://postednot.es" />
-      <meta property="og:description" content="A handwritten letter is a beautiful thing, which we don't see much anymore. PostedNot.es lets you type a message and we'll write it out and post it for you." />
+    <!-- FB snippet stuff -->
+    <meta property="og:title" content="PostedNot.es" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://postednot.es/img/write-a-note.png" />
+    <meta property="og:url" content="http://postednot.es" />
+    <meta property="og:description" content="A handwritten letter is a beautiful thing, which we don't see much anymore. PostedNot.es lets you type a message and we'll write it out and post it for you." />
 
-      <!-- Google+ snippets -->
-      <meta itemprop="name" content="PostedNot.es">
-      <meta itemprop="description" content="A handwritten letter is a beautiful thing, which we don&#39;t see much anymore. PostedNot.es lets you type a message and we&#39;ll write it out and post it for you.">
-      <meta itemprop="image" content="http://postednot.es/img/write-a-note.png">
+    <!-- Google+ snippets -->
+    <meta itemprop="name" content="PostedNot.es">
+    <meta itemprop="description" content="A handwritten letter is a beautiful thing, which we don&#39;t see much anymore. PostedNot.es lets you type a message and we&#39;ll write it out and post it for you.">
+    <meta itemprop="image" content="http://postednot.es/img/write-a-note.png">
 
-      <meta name="google-site-verification" content="bYpQZQy2z7eaXk9vCerlL68pUMypqSco-A_Gm9UnP9o" />
+    <meta name="google-site-verification" content="bYpQZQy2z7eaXk9vCerlL68pUMypqSco-A_Gm9UnP9o" />
     <!-- end snippets -->
 </head>
 
 <body>
-<style type="text/css" media="screen">
-    path, rect {
+    <style type="text/css" media="screen">
+    path,
+    rect {
         fill: none;
         stroke: none;
         pointer-events: all;
     }
-    path:hover, rect:hover {
-        fill:   rgba(255,210,0,0.3);
-        stroke: rgba(255,210,0,1);
+    path:hover,
+    rect:hover {
+        fill: rgba(255, 210, 0, 0.3);
+        stroke: rgba(255, 210, 0, 1);
     }
-    dd{padding-left: 3em;}
-    dt::after{content:": ";}
-    .highlighted{
-        border:1px solid red;
+    dd {
+        padding-left: 3em;
+    }
+    dt::after {
+        content: ": ";
+    }
+    .highlighted {
+        border: 1px solid red;
         color: red;
     }
-    .items{
+    .items {
         -webkit-column-width: 20em;
         -moz-column-width: 20em;
         -o-column-width: 20em;
         column-width: 20em;
     }
-    .interview{
+    .interview {
         margin-top: 3em;
     }
-    .kit-grid{
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: inherit;
+    .kit-grid {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: inherit;
     }
-    .svg-container{
-      display: inline-block;
-      position: relative;
-      width: 100%;
-      padding-bottom: 80%;
+    .svg-container {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        padding-bottom: 80%;
     }
-</style>
+    </style>
     <header class="jumbotron header-page">
         <div class="container">
             <div class="caption
@@ -84,7 +90,8 @@
                 <h1>Kit Grids</h1>
             </div>
         </div>
-    </header><!--end jumbotron-->
+    </header>
+    <!--end jumbotron-->
 
     <div class="container">
         <div class="row ">
@@ -94,12 +101,13 @@
     </div>
     <!--end container-->
     <script>
-    $(document).ready(function(){
-        $( ".person" ).load( "ben-doherty.html" );
-
-        function activateText(){
+    $(document).ready(function() {
+        $(".person").load("ben-doherty.html");
+    });
+    $("hello-mum").ready(function() {
+        function activateText() {
             $("*").removeClass("highlighted");
-            $(".ben."+$(this).context.id).toggleClass("highlighted");
+            $(".ben." + $(this).context.id).toggleClass("highlighted");
             console.log("clicked " + $(this).context.id);
         }
 
@@ -110,15 +118,15 @@
     <!-- <script async src="js/useful.js"></script>-->
     <!-- <script async src="bootstrap-helper.js"></script> -->
     <script>
-      // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      // ga('create', 'UA-52654925-1', 'auto');
-      // ga('send', 'pageview');
-
+    // ga('create', 'UA-52654925-1', 'auto');
+    // ga('send', 'pageview');
     </script>
 
-    </body>
+</body>
+
 </html>
