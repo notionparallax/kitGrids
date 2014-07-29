@@ -23,7 +23,8 @@ dt::after {
   -webkit-column-width: 20em;
   -moz-column-width: 20em;
   -o-column-width: 20em;
-  column-width: 20em; }
+  column-width: 20em;
+  z-index: 500; }
 
 .interview {
   margin-top: 3em; }
@@ -41,8 +42,17 @@ dt::after {
   width: 100%;
   padding-bottom: 80%; }
 
-svg {
-    z-index: -1000;
-}
+.this-item {
+  position: absolute;
+  right: 0;
+  width: 28%;
+  padding: 1em;
+  padding-top: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 0 0 0 1.5em; }
+  .this-item p {
+    line-height: 1.7em; }
+  .this-item h1 {
+    font-size: 130%; }
 
 /*# sourceMappingURL=kitgrid.css.map */

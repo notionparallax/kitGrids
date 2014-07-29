@@ -43,14 +43,15 @@
 <body>
     <header class="jumbotron header-page">
         <div class="container">
-            <div class="caption
-                        col-xs-12 col-sm-6 col-sm-offset-3 text-center">
-                <h1>Kit Grids</h1>
-                <select class="form-control person-picker">
-                    <option value="ben-doherty.html" selected>Ben Doherty</option>
-                    <option value="irina-belova.html" >Irina Belova</option>
-                    <option value="another-person.html">Another Person</option>
-                </select>
+            <div class="row">
+                <div class="col-md-6"><h1>Kit Grids</h1></div>
+                <div class="col-md-6">
+                    <select class="form-control person-picker">
+                        <option value="ben-doherty.html" selected>Ben Doherty</option>
+                        <option value="irina-belova.html" >Irina Belova</option>
+                        <option value="another-person.html">Another Person</option>
+                    </select>
+                </div>
             </div>
         </div>
     </header>
@@ -63,8 +64,14 @@
             </div>
         </div>
     </div>
+    <div id="disqus_thread"></div>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
     <!--end container-->
      <script async src="js/useful.js"></script>
+     <script async src="js/disqus.js"></script>
     <!-- <script async src="bootstrap-helper.js"></script> -->
     <script>
     // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
