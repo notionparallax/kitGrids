@@ -1,4 +1,12 @@
-path, rect {
+@-ms-viewport {
+  /*this supposedly fixes it for win mob 8*/
+  width: device-width; }
+body {
+  background: rgba(62, 71, 157, 0.05);
+  font-family: "Roboto Slab";
+  font-weight: 300; }
+
+path, rect, circle {
   fill: none;
   stroke: none;
   pointer-events: all; }
@@ -27,6 +35,11 @@ dt::after {
   z-index: 500; }
 
 .interview {
+  margin-top: 3em;
+  padding-top: 2em;
+  border-top: 1px solid silver; }
+
+.portrait {
   margin-top: 3em; }
 
 .kit-grid {
@@ -54,5 +67,14 @@ dt::after {
     line-height: 1.7em; }
   .this-item h1 {
     font-size: 130%; }
+
+@media portrait {
+  /*this is to put the single item under the image
+    on small portrait screens*/
+  .this-item {
+    position: initial;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 0; } }
 
 /*# sourceMappingURL=kitgrid.css.map */
