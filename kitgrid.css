@@ -41,4 +41,8 @@ dt::after {
   width: 100%;
   padding-bottom: 80%; }
 
+svg {
+    z-index: -1000;
+}
+
 /*# sourceMappingURL=kitgrid.css.map */
