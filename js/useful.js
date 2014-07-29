@@ -16,6 +16,7 @@ $(document).ready(function() {
     $(".person-picker").change(function() {
         console.log($(this).context.value);
         $(".person").load($(this).context.value, reRegisterEvents);
+        document.location.hash = $(this).context.value.split(".")[0];
     });
 
 });
