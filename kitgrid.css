@@ -1,6 +1,10 @@
 @-ms-viewport {
   /*this supposedly fixes it for win mob 8*/
   width: device-width; }
+body, html {
+  height: 100%;
+  width: 100%; }
+
 body {
   background: rgba(62, 71, 157, 0.05);
   font-family: "Roboto Slab";
@@ -51,13 +55,17 @@ dt::after {
 
 .svg-container {
   display: inline-block;
-  position: relative;
   width: 100%;
   padding-bottom: 80%; }
+
+.person {
+  position: relative;
+  display: flex; }
 
 .this-item {
   position: absolute;
   right: 0;
+  top: 0;
   width: 28%;
   padding: 1em;
   padding-top: 0;
@@ -68,13 +76,44 @@ dt::after {
   .this-item h1 {
     font-size: 130%; }
 
-@media portrait {
+@media (orientation: portrait) and (max-width: 700px) {
   /*this is to put the single item under the image
-    on small portrait screens*/
+on small portrait screens*/
+  header {
+    background-color: blue; }
+    header h1 {
+      font-size: 16px; }
+
+  .jumbotron {
+    padding: 0.5em; }
+
   .this-item {
     position: initial;
     width: 100%;
     background-color: transparent;
-    border-radius: 0; } }
+    border-radius: 0; }
+
+  .person {
+    display: flex;
+    flex-direction: column;
+    /* stack vertically */
+    flex-wrap: nowrap;
+    /* all in one column */
+    align-items: center;
+    /* horizontally centered */ }
+
+  .svg-container {
+    order: 2;
+    position: relative; }
+
+  .this-item {
+    order: 1;
+    /* put back on top */ }
+
+  .items {
+    order: 3; }
+
+  .interview {
+    order: 4; } }
 
 /*# sourceMappingURL=kitgrid.css.map */

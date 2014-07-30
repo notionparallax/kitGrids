@@ -1,13 +1,18 @@
 @charset"utf-8";
-@-ms-viewport {/*this supposedly fixes it for win mob 8*/
-  width: device-width;
+
+@-ms-viewport {
+    /*this supposedly fixes it for win mob 8*/
+    width: device-width;
+}
+body, html {
+    height: 100%;
+    width: 100%;
 }
 body {
     background: rgba(62, 71, 157, 0.05);
     font-family: "Roboto Slab";
     font-weight: 300;
 }
-
 path, rect, circle {
     fill: none;
     stroke: none;
@@ -53,15 +58,17 @@ dt::after {
 }
 .svg-container {
     display: inline-block;
-    position: relative;
     width: 100%;
     padding-bottom: 80%;
 }
-svg {}
-
-.this-item {
+.person {
+    position: relative;
+    display: flex;
+}
+svg {} .this-item {
     position: absolute;
     right: 0;
+    top: 0;
     width: 28%;
     padding: 1em;
     padding-top: 0;
@@ -74,16 +81,46 @@ svg {}
         font-size: 130%;
     }
 }
-
-@media portrait{
-/*this is to put the single item under the image
+@media (orientation: portrait) and (max-width: 700px) {
+    /*this is to put the single item under the image
   on small portrait screens*/
+    header {
+        background-color: blue;
+        h1 {
+            font-size: 16px;
+        }
+    }
+    .jumbotron {
+        padding: 0.5em;
+    }
     .this-item {
         position: initial;
         width: 100%;
         background-color: transparent;
         border-radius: 0;
-        p {}
-        h1 {}
+        p {} h1 {}
+    }
+    .person {
+        display: flex;
+        flex-direction: column;
+        /* stack vertically */
+        flex-wrap: nowrap;
+        /* all in one column */
+        align-items: center;
+        /* horizontally centered */
+    }
+    .svg-container {
+        order: 2;
+        position: relative;
+    }
+    .this-item {
+        order: 1;
+        /* put back on top */
+    }
+    .items {
+        order: 3;
+    }
+    .interview {
+        order: 4;
     }
 }
