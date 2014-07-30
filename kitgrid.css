@@ -59,8 +59,7 @@ dt::after {
   padding-bottom: 80%; }
 
 .person {
-  position: relative;
-  display: flex; }
+  position: relative; }
 
 .this-item {
   position: absolute;
