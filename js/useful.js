@@ -34,6 +34,8 @@ $(document).ready(function() {
         return "!"+value;
     };
 
+    $('select').selectpicker();
+
     $(".person").load("ben-doherty.html", reRegisterEvents);
 
     $(".person-picker").change(function() {
