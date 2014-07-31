@@ -75,6 +75,40 @@ dt::after {
   .this-item h1 {
     font-size: 130%; }
 
+.photo-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-top: 3em;
+  margin-bottom: 3em; }
+  .photo-list .photo {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex: 1;
+    flex-grow: 1;
+    -webkit-flex-shrink: 0;
+    -ms-flex: 0 0;
+    flex-shrink: 0;
+    -webkit-flex-basis: 200px;
+    -ms-flex: 0 1 200px;
+    flex-basis: 200px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    height: 200px;
+    background-size: cover;
+    cursor: pointer; }
+
 @media (orientation: portrait) and (max-width: 700px) {
   /*this is to put the single item under the image
 on small portrait screens*/
@@ -84,7 +118,8 @@ on small portrait screens*/
       font-size: 16px; }
 
   .jumbotron {
-    padding: 0.5em; }
+    padding: 0.5em;
+    margin-bottom: 0; }
 
   .this-item {
     position: initial;
@@ -107,7 +142,8 @@ on small portrait screens*/
 
   .this-item {
     order: -1;
-    /* put back on top */ }
+    /* put back on top */
+    height: 21em; }
 
   .person > .row {
     order: 2; } }
