@@ -45,8 +45,14 @@ $(document).ready(function() {
     }
     $(".person-picker").change(function() {
         console.log($(this).context.value);
+
+        //set the selected option to selected
+        
+
+        //load the content into the middle of the page
         $(".person").load($(this).context.value, reRegisterEvents);
 
+        // reset the comments so that they point to the right page
         var pageName = $(this).context.value.split(".")[0];
         document.location.hash = hashbanger(pageName);
         resetD(pageName, "http://notionparallax.github.io/kitGrids/#!"+pageName,pageName,'en');
