@@ -30,14 +30,19 @@ $(document).ready(function() {
         $("path").click(activateText);
         $("rect").click(activateText);
     };
+
     function hashbanger(value){
         return "!"+value;
     };
 
     $('select').selectpicker();
 
-    $(".person").load("ben-doherty.html", reRegisterEvents);
-
+    var personParam = document.URL.split('#!')[1];
+    if(personParam){
+        $(".person").load(personParam+".html", reRegisterEvents);
+    }else{
+        $(".person").load("front-page.html", reRegisterEvents);
+    }
     $(".person-picker").change(function() {
         console.log($(this).context.value);
         $(".person").load($(this).context.value, reRegisterEvents);
