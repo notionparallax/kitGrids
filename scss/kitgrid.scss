@@ -151,8 +151,8 @@ svg {} .this-item {
         position: relative;
     }
     .this-item {
-        order: -1;
-        /* put back on top */
+        order: -1; /* put back on top */
+        height: 21em;
     }
     .person > .row {
         order: 2;
