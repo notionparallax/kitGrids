@@ -109,17 +109,14 @@ svg {} .this-item {
         /* horizontally centered */
     }
     .svg-container {
-        order: 2;
+        order: 0;
         position: relative;
     }
     .this-item {
-        order: 1;
+        order: -1;
         /* put back on top */
     }
-    .items {
-        order: 3;
-    }
-    .interview {
-        order: 4;
+    .person > .row {
+        order: 2;
     }
 }
