@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     /* * * Disqus Reset Function * * */
     var resetD = function (newIdentifier, newUrl, newTitle, newLanguage) {
         DISQUS.reset({
@@ -15,36 +16,50 @@ $(document).ready(function() {
 
     function activateText() {
         var id = $(this).context.id;
+        console.log("clicked " + id);
         $("*").removeClass("highlighted");
         $( id).toggleClass("highlighted");
 
         var itemTitle = $("."+id).html();
         var itemBody  = $("."+id+" + dd").html();
         $(".this-item").html("<h1>"+itemTitle+"</h1>"+"<p>"+itemBody+"<p>");
-        console.log("clicked " + id);
         console.log([itemTitle,itemBody]);
     };
 
     function reRegisterEvents() {
-        console.log("loaded");
         $("path").click(activateText);
         $("rect").click(activateText);
+        console.log("reRegisterEvents run");
     };
 
     function hashbanger(value){
         return "!"+value;
     };
 
-    $('select').selectpicker();
+    function injectAperson(personName){
+        $("#items-receiver"    ).load(personName + ".html #items");
+        $("#interview-receiver").load(personName + ".html #interview");
+        $("#portrait-receiver" ).load(personName + ".html #portrait");
+        $("#svg-receiver"      ).load(personName + ".html #svg", reRegisterEvents);
+    }
 
     var personParam = document.URL.split('#!')[1];
     if(personParam){
-        $(".person").load(personParam+".html", reRegisterEvents);
+        console.log(personParam);
+        injectAperson(personParam);
+        // $(".person").load(personParam + ".html", reRegisterEvents);
     }else{
         $(".person").load("front-page.html", reRegisterEvents);
     }
-    $(".person-picker").change(function() {
-        var selectedValue = $(this).context.value;
+
+    $(".show-menu").click(function(){
+        $('nav').toggleClass('nav-visible');
+    });
+
+    $("nav li a").click(function(event){
+        event.preventDefault();
+
+        var selectedValue = $(this).data().person;
         console.log(selectedValue);
 
         //set the selected option to selected
@@ -53,12 +68,12 @@ $(document).ready(function() {
                .prop('selected', true);
 
         //load the content into the middle of the page
-        $(".person").load(selectedValue, reRegisterEvents);
-
+        injectAperson(selectedValue);
         // reset the comments so that they point to the right page
         var pageName = selectedValue.split(".")[0];
         document.location.hash = hashbanger(pageName);
         resetD(pageName, "http://notionparallax.github.io/kitGrids/#!"+pageName,pageName,'en');
 
+        $('nav').toggleClass('nav-visible');
     });
 });
