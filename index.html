@@ -55,58 +55,91 @@
         </div>
     </header>
     <nav>
-        <ul>
-            <li><a href="#" data-person="jodie-hinton"    title="Jodie Hinton"   ><img src="jodie-hinton/portrait.jpg"></a></li>
-            <li><a href="#" data-person="lachlan-rowston" title="Lachlan Rowston"><img src="lachlan-rowston/portrait.jpg"></a></li>
-            <li><a href="#" data-person="irina-belova"    title="Irina Belova"   ><img src="irina-belova/portrait.jpg"></a></li>
-            <li><a href="#" data-person="ben-doherty"     title="Ben Doherty"    ><img src="ben-doherty/portrait.jpg"></a></li>
+        <!--Simple Card Layout-->
 
-            <li><a href="#" data-person="jodie-hinton"    title="Jodie Hinton"   ><img src="jodie-hinton/portrait.jpg"></a></li>
-            <li><a href="#" data-person="lachlan-rowston" title="Lachlan Rowston"><img src="lachlan-rowston/portrait.jpg"></a></li>
-            <li><a href="#" data-person="irina-belova"    title="Irina Belova"   ><img src="irina-belova/portrait.jpg"></a></li>
-            <li><a href="#" data-person="ben-doherty"     title="Ben Doherty"    ><img src="ben-doherty/portrait.jpg"></a></li>
-            <li><a href="#" data-person="jodie-hinton"    title="Jodie Hinton"   ><img src="jodie-hinton/portrait.jpg"></a></li>
-            <li><a href="#" data-person="lachlan-rowston" title="Lachlan Rowston"><img src="lachlan-rowston/portrait.jpg"></a></li>
-            <li><a href="#" data-person="irina-belova"    title="Irina Belova"   ><img src="irina-belova/portrait.jpg"></a></li>
-            <li><a href="#" data-person="ben-doherty"     title="Ben Doherty"    ><img src="ben-doherty/portrait.jpg"></a></li>
-            <li><a href="#" data-person="jodie-hinton"    title="Jodie Hinton"   ><img src="jodie-hinton/portrait.jpg"></a></li>
-            <li><a href="#" data-person="lachlan-rowston" title="Lachlan Rowston"><img src="lachlan-rowston/portrait.jpg"></a></li>
-            <li><a href="#" data-person="irina-belova"    title="Irina Belova"   ><img src="irina-belova/portrait.jpg"></a></li>
-            <li><a href="#" data-person="ben-doherty"     title="Ben Doherty"    ><img src="ben-doherty/portrait.jpg"></a></li>
-        </ul>
+
+        <ul>
+            <li>
+                <a href="#" data-person="jodie-hinton" title="Jodie Hinton">
+                    <img src="jodie-hinton/portrait.jpg">
+                    <h2>Jodie Hinton</h2>
+                </a>
+            </li>
+            <li>
+                <a href="#" data-person="lachlan-rowston" title="Lachlan Rowston">
+                    <img src="lachlan-rowston/portrait.jpg">
+                    <h2>Lachlan Rowston</h2>
+                </a>
+            </li>
+            <li>
+                <a href="#" data-person="irina-belova" title="Irina Belova">
+                    <img src="irina-belova/portrait.jpg">
+                    <h2>Irina Belova</h2>
+                </a>
+            </li>
+            <li>
+                <a href="#" data-person="ben-doherty" title="Ben Doherty">
+                    <img src="ben-doherty/portrait.jpg">
+                    <h2>Ben Doherty</h2>
+                </a>
+            </li>
+
+            <!-- <li><div class="media block-update-card">
+                    <a href="#">
+                        <img class="update-card-MDimentions" src="jodie-hinton/portrait.jpg" alt="..." title="Jodie Hinton">
+                    </a>
+                    <div class="">
+                        <h4 class="media-heading">Jodie Hinton</h4>
+                        <p>This is the body content of this media.This can be used as an update panel</p>
+                    </div>
+                </div>
+            </li>
+        </ul> -->
     </nav>
-    <div class="tabs">
-        <a href="#" class="active">G</a>
-        <a href="#">L</a>
-        <a href="#">I</a>
-    </div>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="content-slide">
-                    <div class="this-item">
-                        <p>Touch the things in the photo to find out about them</p>
-                        <p>Go right to see a list &rarr;</p>
-                        <p>And even further right for a mini interview and some comments &rarr;&rarr;</p>
+    <div class="content-block">
+        <div class="tabs">
+            <a href="#" class="active">G</a>
+            <a href="#">L</a>
+            <a href="#">I</a>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="content-slide">
+                        <!-- <div class="rearange-this"> -->
+                            <div class="kitgrid">
+                                <div id="svg-receiver">
+                                    <!-- The svg gets injected in here -->
+                                </div>
+                            </div>
+                            <div class="this-item">
+                                <p>Touch the things in the photo to find out about them</p>
+                                <p>Go right to see a list &rarr;</p>
+                                <p>And even further right for a mini interview and some comments &rarr;&rarr;</p>
+                            </div>
+                        <!-- </div> -->
                     </div>
-                    <div class="kitgrid">
-                        <div id="svg-receiver"><!-- The svg gets injected in here --></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="content-slide interview kitlist">
+                        <div id="items-receiver">
+                            <!-- The items gets injected in here -->
+                        </div>
                     </div>
-                    <!-- <div class="kitgrid"></div> -->
                 </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="content-slide interview kitlist">
-                    <div id="items-receiver"><!-- The items gets injected in here --></div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="content-slide interview">
-                    <div id="portrait-receiver"><!--  The portrait gets injected in here --></div>
-                    <div id="interview-receiver"><!-- The interview gets injected in here --></div>
-                    <div id="disqus_thread"></div>
-                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                <div class="swiper-slide">
+                    <div class="content-slide interview">
+                        <div id="portrait-receiver">
+                            <!--  The portrait gets injected in here -->
+                        </div>
+                        <div id="interview-receiver">
+                            <!-- The interview gets injected in here -->
+                        </div>
+                        <div id="disqus_thread"></div>
+                        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                        </noscript>
+                        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                    </div>
                 </div>
             </div>
         </div>
