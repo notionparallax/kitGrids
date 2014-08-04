@@ -53,11 +53,9 @@ $(document).ready(function() {
 
     var personParam = document.URL.split('#!')[1];
     if (personParam) {
-        console.log(personParam);
         injectAperson(personParam);
-        // $(".person").load(personParam + ".html", reRegisterEvents);
     } else {
-        $(".person").load("front-page.html", reRegisterEvents);
+        injectAperson("landing-page");
     }
 
     $(".show-menu").click(function() {
