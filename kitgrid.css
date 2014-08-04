@@ -250,6 +250,11 @@ header {
   #portrait {
     margin-bottom: 2em; }
 
+  #portrait-receiver {
+    float: right;
+    width: 30%;
+    margin-left: 2em; }
+
   .highlighted {
     border: 1px solid red;
     color: red; }
