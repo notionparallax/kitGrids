@@ -83,7 +83,7 @@ $(document).ready(function() {
         deferSetup: true,
         setup: function() {
             console.log("enquire setup called");
-            var tabsSwiper = new Swiper('.swiper-container', {
+            window.tabsSwiper = new Swiper('.swiper-container', {
                 speed: 300,
                 onSlideChangeStart: function() {
                     $(".tabs .active").removeClass('active')
