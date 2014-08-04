@@ -32,8 +32,14 @@ $(document).ready(function() {
         console.log("reRegisterEvents run");
     };
 
-    function hashbanger(value) {
+    function prebanger(value) {
         return "!" + value;
+    };
+
+    String.prototype.toProperCase = function() {
+        return this.replace(/\w\S*/g, function(txt) {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        });
     };
 
     function injectAperson(personName) {
@@ -41,6 +47,8 @@ $(document).ready(function() {
         $("#interview-receiver").load(personName + ".html #interview");
         $("#portrait-receiver").load(personName + ".html #portrait");
         $("#svg-receiver").load(personName + ".html #svg", reRegisterEvents);
+        var titleName = personName.replace("-", " ").toProperCase();
+        $(".name-bar h1").html(titleName);
     }
 
     var personParam = document.URL.split('#!')[1];
@@ -71,7 +79,7 @@ $(document).ready(function() {
         injectAperson(selectedValue);
         // reset the comments so that they point to the right page
         var pageName = selectedValue.split(".")[0];
-        document.location.hash = hashbanger(pageName);
+        document.location.hash = prebanger(pageName);
         resetD(pageName, "http://notionparallax.github.io/kitGrids/#!" + pageName, pageName, 'en');
 
         $('nav').toggleClass('nav-visible');
@@ -105,7 +113,7 @@ $(document).ready(function() {
         },
         unmatch: function() {
             console.log("enquire unmatch called");
-            tabsSwiper.destroy( true );
+            tabsSwiper.destroy(true);
         }
 
     });
