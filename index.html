@@ -25,14 +25,14 @@
     <!-- FB snippet stuff -->
     <meta property="og:title" content="Kit Grids" />
     <meta property="og:type" content="website" />
-    <!-- <meta property="og:image" content="" /> -->
+    <meta property="og:image" content="jr-bedford/portrait.jpg" /><!-- This might need to be a full url -->
     <!-- <meta property="og:url" content="" /> -->
-    <meta property="og:description" content="What do top crossfiters take with them to the gym?" />
+    <meta property="og:description" content="What do top (and not-so-top) crossfiters take with them to the gym?" />
 
     <!-- Google+ snippets -->
     <meta itemprop="name" content="Kit Grids">
     <meta itemprop="description" content="What do top (and not-so-top) crossfiters take with them to the gym?">
-    <!-- <meta itemprop="image" content=""> -->
+    <meta itemprop="image" content="jr-bedford/portrait.jpg"><!-- This might need to be a full url -->
 
     <!-- <meta name="google-site-verification" content="bYpQZQy2z7eaXk9vCerlL68pUMypqSco-A_Gm9UnP9o" /> -->
     <!-- end snippets -->
@@ -177,29 +177,11 @@
     </div>
     <!--end container-->
 
+    <script src="js/idangerous.swiper-2.1.min.js"></script>
+    <script src="js/enquire.min.js"></script>
     <script async src="js/useful.js"></script>
     <script async src="js/disqus.js"></script>
     <!-- <script async src="bootstrap-helper.js"></script> -->
-
-    <script src="js/idangerous.swiper-2.1.min.js"></script>
-    <script>
-    var tabsSwiper = new Swiper('.swiper-container', {
-        speed: 300,
-        onSlideChangeStart: function() {
-            $(".tabs .active").removeClass('active')
-            $(".tabs a").eq(tabsSwiper.activeIndex).addClass('active')
-        }
-    })
-    $(".tabs a").on('touchstart mousedown', function(e) {
-        e.preventDefault()
-        $(".tabs .active").removeClass('active')
-        $(this).addClass('active')
-        tabsSwiper.swipeTo($(this).index())
-    })
-    $(".tabs a").click(function(e) {
-        e.preventDefault()
-    })
-    </script>
 
 </body>
 
