@@ -136,7 +136,13 @@ header {
 
 .head {
   height: 3em;
-  background-color: brown; }
+  background-color: brown;
+  text-decoration: none;
+  color: white;
+  padding-left: 3px;
+  padding-top: 3px; }
+  .head a {
+    color: white; }
 
 .head h1 {
   display: inline;
@@ -188,6 +194,45 @@ header {
   display: -webkit-flex;
   display: flex;
   flex-flow: column; }
+
+.tutorial {
+  margin-bottom: 3em; }
+  .tutorial .tabs {
+    position: initial;
+    top: 16em;
+    overflow: initial;
+    height: inherit; }
+    .tutorial .tabs div {
+      vertical-align: top;
+      display: inline-block;
+      width: 25%;
+      text-align: center; }
+      .tutorial .tabs div:first-child {
+        /*this targets the first div's arrow*/
+        width: 20%; }
+        .tutorial .tabs div:first-child span:first-child {
+          -webkit-transform: translateX(-1em) rotate(0);
+          -o-transform: translateX(-1em) rotate(0);
+          transform: translateX(-1em) rotate(0); }
+      .tutorial .tabs div:nth-child(2) span {
+        -webkit-transform: translateX(-1em) rotate(-35deg);
+        -o-transform: translateX(-1em) rotate(-35deg);
+        transform: translateX(-1em) rotate(-35deg); }
+      .tutorial .tabs div:nth-child(3) span {
+        -webkit-transform: translateX(-1em) rotate(-15deg);
+        -o-transform: translateX(-1em) rotate(-15deg);
+        transform: translateX(-1em) rotate(-15deg); }
+      .tutorial .tabs div:nth-child(4) span {
+        -webkit-transform: translateX(-0.3em) rotate(0);
+        -o-transform: translateX(-0.3em) rotate(0);
+        transform: translateX(-0.3em) rotate(0); }
+      .tutorial .tabs div span {
+        display: block;
+        font-size: 200%; }
+
+.landing {
+  padding-right: 1em;
+  padding-left: 1em; }
 
 @media screen and (min-width: 699px) {
   body {
@@ -358,6 +403,9 @@ header {
     background-color: white; }
     .name-bar h1 {
       font-size: 4em;
-      margin: 0; } }
+      margin: 0; }
+
+  .tutorial {
+    display: none; } }
 
 /*# sourceMappingURL=kitgrid.css.map */

@@ -55,7 +55,7 @@ $(document).ready(function() {
     if (personParam) {
         injectAperson(personParam);
     } else {
-        injectAperson("landing-page");
+        injectAperson("kit-grids");
     }
 
     $(".show-menu").click(function() {
