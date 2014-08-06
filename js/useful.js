@@ -49,6 +49,8 @@ $(document).ready(function() {
         $("#svg-receiver").load(personName + ".html #svg", reRegisterEvents);
         var titleName = personName.replace("-", " ").toProperCase();
         $(".name-bar h1").html(titleName);
+
+        ga('send', 'event', 'new person', personName);
     }
 
     var personParam = document.URL.split('#!')[1];
