@@ -88,6 +88,9 @@ $(document).ready(function() {
     });
 
 
+    /*This is all about the switch from small screen to big screen
+      unloads all the events that are needed to control the swiping
+      and tabs*/
     enquire.register("screen and (max-width: 699px)", {
 
         deferSetup: true,
