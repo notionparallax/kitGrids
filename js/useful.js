@@ -23,7 +23,9 @@ $(document).ready(function() {
         var itemTitle = $("." + id).html();
         var itemBody = $("." + id + " + dd").html();
         $(".this-item").html("<h1>" + itemTitle + "</h1>" + "<p>" + itemBody + "<p>");
+
         console.log([itemTitle, itemBody]);
+        ga('send', 'event', 'clicked a thing', document.URL.split('#!')[1], itemTitle, );
     };
 
     function reRegisterEvents() {
