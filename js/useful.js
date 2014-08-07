@@ -50,8 +50,8 @@ $(document).ready(function() {
         $("#portrait-receiver").load(personName + ".html #portrait");
         $("#svg-receiver").load(personName + ".html #svg", reRegisterEvents);
         var titleName = personName.replace("-", " ").toProperCase();
-        $(".name-bar h1").html(titleName);
-
+        $(".name-bar h1" ).html(titleName);
+        //$(".name-bar span").html("<img src='"+personName+"/portrait.jpg'>");
         ga('send', 'event', 'new person', personName);
     }
 
