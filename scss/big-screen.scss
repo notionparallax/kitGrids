@@ -1,11 +1,22 @@
 $navWidth: 30%;
 $debugborder: 1px dashed red;
+$headerHeight: 6em;
 
 body {
-        background: rgba(62, 71, 157, 0.05);
+        background: white;
     }
-dd {}
-dt::after {}
+dd {
+    padding-left: 0;
+    margin-bottom: 1em;
+    -webkit-column-break-inside: avoid;
+    -webkit-column-break-before: avoid;
+}
+dt{
+    font-size: 120%;
+    font-weight: 400;
+    -webkit-column-break-after: avoid;
+    &::after {}
+}
 nav {
     width: $navWidth;
     height: inherit;
@@ -14,9 +25,6 @@ nav {
     z-index: 0;
     padding-top: 6em;
     overflow-y: auto;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
     transition: all 0.2s ease;
     position: relative;
     float: left;
@@ -39,11 +47,8 @@ nav {
     }
     li {
         flex-basis: 200px;
-        height: 100px;
+        height: 220px;
         overflow: hidden;
-        -webkit-box-shadow: 2px 2px 14px 0px rgba(50, 50, 50, 0.43);
-        -moz-box-shadow: 2px 2px 14px 0px rgba(50, 50, 50, 0.43);
-        box-shadow: 2px 2px 14px 0px rgba(50, 50, 50, 0.43);
         flex-grow: 1;
         margin: 0.4em;
         &:hover{
@@ -67,6 +72,23 @@ nav {
         }
     }
 }
+a {
+    color: rgba(0,0,0,0.7);
+    text-decoration: none;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: burlywood;
+    &:hover{
+        border-bottom-color: darken(burlywood, 20);
+        border-bottom-width: 5px;
+        text-decoration: none;
+        color: rgba(0,0,0,0.7);
+    }
+    &:visited{
+        border-bottom-color: lighten(burlywood, 20);
+        border-bottom-width: 2px;
+    }
+}
 #svg {
     position: relative;
 }
@@ -78,16 +100,22 @@ nav {
     width: 45%;
     margin-left: 2em;
 }
+#interview {
+    padding-left: 1em;
+}
+#disqus_thread {
+    padding: 1em;
+}
 .highlighted {
     border: 1px solid red;
     color: red;
 }
 #items {
-    margin-bottom: 5em;
-    -webkit-column-width: 20em;
-    -moz-column-width: 20em;
-    -o-column-width: 20em;
-    column-width: 20em;
+    margin-bottom: 3em;
+    -webkit-column-width: 17em;
+    -moz-column-width: 17em;
+    -o-column-width: 17em;
+    column-width: 17em;
     z-index: 500;
 }
 .content-block {
@@ -96,11 +124,12 @@ nav {
     overflow-y: auto;
     overflow-x: hidden;
     height: 100%;
+    color: rgba(0,0,0,0.7);
+    font-size: 120%;
 }
 .interview {
-    margin-top: 3em;
-    padding-top: 2em;
-    // border-top: 1px solid silver;
+    margin-top: 0;
+    padding-top: 0;
 }
 .portrait {
     margin-top: 3em;
@@ -153,11 +182,11 @@ header {
 }
 .head {
     height: $headerHeight;
-    background-color: brown;
-}
-.head h1 {
-    display: inline;
-    color: white;
+    background-color: black;
+    h1 {
+        display: inline;
+        font-size: 300%;
+    }
 }
 .tabs {
     display: none;
@@ -175,7 +204,7 @@ header {
 }
 .content-slide {
     padding:    0em;
-    margin-top: $headerHeight;
+    margin-top: 5em;
     height:     90%;
     position:   relative;
     overflow-y: auto;
@@ -186,15 +215,16 @@ header {
 }
 .kitlist {
     margin-top: 0;
+    padding-left: 1em;
 }
 .name-bar {
-    margin-bottom: 2em;
-    border-top: 2px solid silver;
-    border-bottom: 2px solid silver;
-    background-color: white;
-    padding: 1em;
+    margin-bottom: 1em;
+    // background-color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
     h1{
-        font-size: 4em;
+        font-size: 3em;
+        padding-left: 0;
         margin: 0;
     }
     // span {
