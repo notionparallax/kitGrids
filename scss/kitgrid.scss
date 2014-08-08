@@ -68,14 +68,6 @@ nav {
         height: 100px;
         overflow: hidden;
         position: relative;
-        -webkit-box-shadow: 2px 2px 14px 0px rgba(50, 50, 50, 0.43);
-        -moz-box-shadow: 2px 2px 14px 0px rgba(50, 50, 50, 0.43);
-        box-shadow: 2px 2px 14px 0px rgba(50, 50, 50, 0.43);
-        &:hover {
-            -webkit-box-shadow: 2px 2px 14px 0px rgba(50, 50, 50, 0.6);
-            -moz-box-shadow: 2px 2px 14px 0px rgba(50, 50, 50, 0.6);
-            box-shadow: 2px 2px 14px 0px rgba(50, 50, 50, 0.6);
-        }
         h2 {
             bottom: 0;
             right: 0;
