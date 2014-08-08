@@ -38,7 +38,7 @@ nav {
         align-content: flex-end;
     }
     li {
-        flex-basis: 150px;
+        flex-basis: 200px;
         height: 100px;
         overflow: hidden;
         -webkit-box-shadow: 2px 2px 14px 0px rgba(50, 50, 50, 0.43);
@@ -52,7 +52,7 @@ nav {
             box-shadow:         2px 2px 14px 0px rgba(50, 50, 50, 0.6);
         }
         &:first-child {
-            flex-basis: 300px;
+            flex-basis: 400px;
             height: 200px;
         }
         h2{
