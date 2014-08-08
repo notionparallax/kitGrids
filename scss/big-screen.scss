@@ -1,6 +1,6 @@
 $navWidth: 30%;
 $debugborder: 1px dashed red;
-$headerHeight: 6em;
+$headerHeight: 0;
 
 body {
         background: white;
@@ -23,7 +23,7 @@ nav {
     position: initial;
     left: 0%;
     z-index: 0;
-    padding-top: 6em;
+    padding-top: 0;
     overflow-y: auto;
     transition: all 0.2s ease;
     position: relative;
@@ -56,11 +56,6 @@ nav {
             -moz-box-shadow:    2px 2px 14px 0px rgba(50, 50, 50, 0.6);
             box-shadow:         2px 2px 14px 0px rgba(50, 50, 50, 0.6);
         }
-        &:first-child {
-            flex-basis: 400px;
-            height: 380px;
-            border: 1px dashed silver;
-        }
         h2{
             bottom: 0;
             right: 0;
@@ -70,6 +65,14 @@ nav {
             background-color: rgba(0,0,0,0.3);
             font-size: 135%;
             color: white;
+        }
+        &:first-child {
+            flex-basis: 400px;
+            height: 380px;
+            border: 1px dashed silver;
+            h2{
+                display:none;
+            }
         }
     }
 }
@@ -170,24 +173,13 @@ a {
 }
 // front page
 header {
-    position: fixed;
-    z-index: 1000;
-    width: 100%;
-    margin: 0;
+    display: none;
 }
 .nav-visible {
     left: 0;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-}
-.head {
-    height: $headerHeight;
-    background-color: black;
-    h1 {
-        display: inline;
-        font-size: 300%;
-    }
 }
 .tabs {
     display: none;
@@ -205,7 +197,7 @@ header {
 }
 .content-slide {
     padding:    0em;
-    margin-top: 5em;
+    margin-top: 0;
     height:     90%;
     position:   relative;
     overflow-y: auto;

@@ -12,10 +12,7 @@ body, html {
   margin: 0;
   padding: 0;
   z-index: 0;
-  position: relative; }
-
-body {
-  background-color: rgba(0, 0, 0, 0.9);
+  position: relative;
   font-family: "Roboto";
   font-weight: 300; }
 
@@ -29,7 +26,7 @@ path:hover, rect:hover {
   stroke: #ffd200; }
 
 dd {
-  padding-left: 3em;
+  padding-left: 1em;
   widows: 3;
   orphans: 2; }
 
@@ -44,7 +41,7 @@ nav {
   left: -80%;
   z-index: 500;
   bottom: 0;
-  padding-top: 15%;
+  padding-top: 6em;
   overflow-y: auto;
   -webkit-box-shadow: 0px 0px 0px 0px rgba(50, 50, 50, 0.5);
   -moz-box-shadow: 0px 0px 0px 0px rgba(50, 50, 50, 0.5);
@@ -82,6 +79,7 @@ nav {
   color: red; }
 
 #items {
+  margin: 1em;
   margin-bottom: 5em;
   -webkit-column-width: 20em;
   -moz-column-width: 20em;
@@ -90,8 +88,11 @@ nav {
   z-index: 500; }
 
 .interview {
-  margin-top: 3em;
-  padding-top: 2em; }
+  margin-top: 3em; }
+
+#interview {
+  margin-left: 1em;
+  margin-right: 1em; }
 
 .portrait {
   margin-top: 3em; }
@@ -110,10 +111,13 @@ nav {
 .person {
   position: relative; }
 
-.this-item p {
-  line-height: 1.7em; }
-.this-item h1 {
-  font-size: 130%; }
+.this-item {
+  margin-left: 1em;
+  margin-right: 1em; }
+  .this-item p {
+    line-height: 1.7em; }
+  .this-item h1 {
+    font-size: 130%; }
 
 header {
   position: fixed;
@@ -129,13 +133,15 @@ header {
 
 .head {
   height: 3em;
-  background-color: brown;
-  text-decoration: none;
+  background-color: darkseagreen;
   color: white;
-  padding-left: 3px;
-  padding-top: 3px; }
+  padding-left: 10px;
+  padding-right: 40px;
+  padding-top: 3px;
+  text-align: center; }
   .head a {
-    color: white; }
+    color: white;
+    text-decoration: none; }
 
 .head h1 {
   display: inline;
@@ -147,7 +153,10 @@ header {
   top: 3em;
   height: 3em;
   width: 100%;
-  z-index: 100; }
+  z-index: 100;
+  -webkit-box-shadow: 3px 0px 20px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow: 3px 0px 20px 0px rgba(50, 50, 50, 0.5);
+  box-shadow: 3px 0px 20px 0px rgba(50, 50, 50, 0.5); }
   .tabs a {
     display: block;
     float: left;
@@ -193,7 +202,10 @@ header {
     position: initial;
     top: 16em;
     overflow: initial;
-    height: inherit; }
+    height: inherit;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
     .tutorial .tabs div {
       vertical-align: top;
       display: inline-block;
@@ -247,7 +259,7 @@ header {
     position: initial;
     left: 0%;
     z-index: 0;
-    padding-top: 6em;
+    padding-top: 0;
     overflow-y: auto;
     transition: all 0.2s ease;
     position: relative;
@@ -277,10 +289,6 @@ header {
         -webkit-box-shadow: 2px 2px 14px 0px rgba(50, 50, 50, 0.6);
         -moz-box-shadow: 2px 2px 14px 0px rgba(50, 50, 50, 0.6);
         box-shadow: 2px 2px 14px 0px rgba(50, 50, 50, 0.6); }
-      nav li:first-child {
-        flex-basis: 400px;
-        height: 380px;
-        border: 1px dashed silver; }
       nav li h2 {
         bottom: 0;
         right: 0;
@@ -290,6 +298,12 @@ header {
         background-color: rgba(0, 0, 0, 0.3);
         font-size: 135%;
         color: white; }
+      nav li:first-child {
+        flex-basis: 400px;
+        height: 380px;
+        border: 1px dashed silver; }
+        nav li:first-child h2 {
+          display: none; }
 
   a {
     color: rgba(0, 0, 0, 0.7);
@@ -383,23 +397,13 @@ header {
       margin: 0; }
 
   header {
-    position: fixed;
-    z-index: 1000;
-    width: 100%;
-    margin: 0; }
+    display: none; }
 
   .nav-visible {
     left: 0;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none; }
-
-  .head {
-    height: 6em;
-    background-color: black; }
-    .head h1 {
-      display: inline;
-      font-size: 300%; }
 
   .tabs {
     display: none; }
@@ -417,7 +421,7 @@ header {
 
   .content-slide {
     padding: 0em;
-    margin-top: 5em;
+    margin-top: 0;
     height: 90%;
     position: relative;
     overflow-y: auto; }
