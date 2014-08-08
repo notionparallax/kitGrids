@@ -280,6 +280,9 @@ header {
         -webkit-box-shadow: 2px 2px 14px 0px rgba(50, 50, 50, 0.6);
         -moz-box-shadow: 2px 2px 14px 0px rgba(50, 50, 50, 0.6);
         box-shadow: 2px 2px 14px 0px rgba(50, 50, 50, 0.6); }
+      nav li:first-child {
+        flex-basis: 300px;
+        height: 200px; }
       nav li h2 {
         bottom: 0;
         right: 0;
