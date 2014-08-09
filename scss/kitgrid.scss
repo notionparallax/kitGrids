@@ -18,13 +18,7 @@ body, html {
     z-index: 0;
     position: relative;
     font-weight: 300;
-    // font-family: "Roboto";
     font-family: "Glegoo";
-    // font-family: "Dosis";
-    // font-family: "Abel";
-    // font-family: "News Cycle";
-    // font-family: "Quicksand";
-    // font-family: "Lobster";
 }
 path, rect, circle {
     fill: none;
@@ -87,7 +81,7 @@ nav {
     }
     li {
         width: 90%;
-        margin: 5%;
+        margin: 1em;
         height: 100px;
         overflow: hidden;
         position: relative;
@@ -100,6 +94,18 @@ nav {
             background-color: rgba(0, 0, 0, 0.6);
             font-size: 135%;
             color: white;
+        }
+        &:first-child {
+            height: 200px;
+            border: 1px dashed silver;
+            h2{
+                display:none;
+            }
+            p{
+                text-align: center;
+                margin-top: 2em;
+                font-size: 2em;
+            }
         }
     }
 }

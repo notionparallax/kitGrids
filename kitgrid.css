@@ -75,7 +75,7 @@ nav {
     padding-left: 0; }
   nav li {
     width: 90%;
-    margin: 5%;
+    margin: 1em;
     height: 100px;
     overflow: hidden;
     position: relative; }
@@ -88,6 +88,15 @@ nav {
       background-color: rgba(0, 0, 0, 0.6);
       font-size: 135%;
       color: white; }
+    nav li:first-child {
+      height: 200px;
+      border: 1px dashed silver; }
+      nav li:first-child h2 {
+        display: none; }
+      nav li:first-child p {
+        text-align: center;
+        margin-top: 2em;
+        font-size: 2em; }
 
 #svg {
   position: relative; }
@@ -290,19 +299,12 @@ a.active {
   nav {
     width: 30%;
     height: inherit;
-    position: initial;
     left: 0%;
     z-index: 0;
     padding-top: 0;
-    overflow-y: auto;
-    transition: all 0.2s ease;
     position: relative;
     float: left; }
-    nav img {
-      width: 100%; }
     nav ul {
-      list-style-type: none;
-      padding-left: 0;
       display: -webkit-flex;
       display: flex;
       -webkit-flex-direction: row;
@@ -316,7 +318,6 @@ a.active {
     nav li {
       flex-basis: 200px;
       height: 220px;
-      overflow: hidden;
       flex-grow: 1;
       margin: 0.4em; }
       nav li:hover {
@@ -334,10 +335,12 @@ a.active {
         color: white; }
       nav li:first-child {
         flex-basis: 400px;
-        height: 380px;
-        border: 1px dashed silver; }
+        height: 380px; }
         nav li:first-child h2 {
           display: none; }
+        nav li:first-child p {
+          margin-top: 1.4em;
+          font-size: 4em; }
 
   #svg {
     position: relative; }
