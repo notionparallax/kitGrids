@@ -13,8 +13,8 @@ body, html {
   padding: 0;
   z-index: 0;
   position: relative;
-  font-family: "Roboto";
-  font-weight: 300; }
+  font-weight: 300;
+  font-family: "Glegoo"; }
 
 path, rect, circle {
   fill: none;
@@ -25,10 +25,31 @@ path:hover, rect:hover {
   fill: rgba(255, 210, 0, 0.3);
   stroke: #ffd200; }
 
+a {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: burlywood; }
+  a:hover {
+    border-bottom-color: #c88937;
+    border-bottom-width: 5px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7); }
+  a:visited {
+    border-bottom-color: #f4e7d7;
+    border-bottom-width: 2px; }
+
 dd {
-  padding-left: 1em;
+  padding-left: 0;
   widows: 3;
   orphans: 2; }
+
+dt, h1 {
+  font-family: "Oswald"; }
+
+dt {
+  margin-top: 0.3em; }
 
 dt::after {
   content: ": "; }
@@ -64,7 +85,7 @@ nav {
       position: absolute;
       margin: 0;
       padding: 0.5em;
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(0, 0, 0, 0.6);
       font-size: 135%;
       color: white; }
 
@@ -133,7 +154,7 @@ header {
 
 .head {
   height: 3em;
-  background-color: darkseagreen;
+  background-color: burlywood;
   color: white;
   padding-left: 10px;
   padding-right: 40px;
@@ -142,10 +163,11 @@ header {
   .head a {
     color: white;
     text-decoration: none; }
-
-.head h1 {
-  display: inline;
-  color: white; }
+  .head h1 {
+    display: inline;
+    color: white; }
+    .head h1 .glyphicon-user {
+      font-size: 85%; }
 
 .tabs {
   position: fixed;
@@ -161,16 +183,22 @@ header {
     display: block;
     float: left;
     width: 33.3%;
-    color: #333;
     text-align: center;
-    background: #fff;
-    font-size: 25px;
-    font-style: italic;
-    text-decoration: none; }
-    .tabs a .active {
-      color: #fff;
-      background: #333;
-      border-bottom: 1px solid #000; }
+    font-size: 132%;
+    text-decoration: none;
+    border: none;
+    padding-top: .3em;
+    padding-bottom: .25em; }
+    .tabs a .glyphicon {
+      font-size: 78%;
+      -webkit-transform: translateY(0.1em);
+      -moz-transform: translateY(0.1em);
+      -o-transform: translateY(0.1em);
+      transform: translateY(0.1em);
+      color: burlywood; }
+
+a.active {
+  border-bottom: 2px solid burlywood; }
 
 .swiper-container {
   width: 100%;
@@ -311,21 +339,6 @@ header {
         nav li:first-child h2 {
           display: none; }
 
-  a {
-    color: rgba(0, 0, 0, 0.7);
-    text-decoration: none;
-    border-bottom-width: 3px;
-    border-bottom-style: solid;
-    border-bottom-color: burlywood; }
-    a:hover {
-      border-bottom-color: #c88937;
-      border-bottom-width: 5px;
-      text-decoration: none;
-      color: rgba(0, 0, 0, 0.7); }
-    a:visited {
-      border-bottom-color: #f4e7d7;
-      border-bottom-width: 2px; }
-
   #svg {
     position: relative; }
 
@@ -387,17 +400,19 @@ header {
     right: 0;
     top: 0;
     width: 25%;
-    padding: 1em;
-    margin-top: 0;
+    margin: 0;
+    padding-top: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
     border-radius: 0;
     height: initial;
     color: black;
-    background-color: rgba(255, 255, 255, 0.8); }
+    background-color: rgba(255, 255, 255, 0.9); }
     .this-item p {
       line-height: 1.4em; }
     .this-item h1 {
-      font-size: 130%;
-      margin: 0; }
+      font-size: 130%; }
 
   header {
     display: none; }
@@ -441,8 +456,10 @@ header {
     display: block;
     margin-bottom: 1em;
     padding-top: 1em;
-    padding-bottom: 1em; }
+    padding-bottom: 1em;
+    padding-left: 2em; }
     .name-bar h1 {
+      font-family: "Glegoo";
       font-size: 3em;
       padding-left: 0;
       margin: 0; }
