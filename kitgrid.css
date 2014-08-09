@@ -468,6 +468,19 @@ a.active {
       margin: 0; }
 
   .tutorial {
-    display: none; } }
+    display: none; }
+
+  /* Let's get this party started */
+  ::-webkit-scrollbar {
+    width: 6px; }
+
+  /* Track */
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.2); }
+
+  ::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0, 0, 0, 0.2); } }
 
 /*# sourceMappingURL=kitgrid.css.map */
