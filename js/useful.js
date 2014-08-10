@@ -46,7 +46,7 @@ $(document).ready(function() {
 
     function makeNameNice(personName){
         var pn = personName.replace("-", " ").toProperCase();
-        if (pn.split(" ")[0] = "Jr"){
+        if (pn.split(" ")[0] === "Jr"){
             return ["JR " + pn.split(" ")[1]];
         }else{
             return pn;
