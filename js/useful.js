@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     /* * * Disqus Reset Function * * */
-    var resetD = function(newIdentifier, newUrl, newTitle, newLanguage) {
+    var  resetD = function(newIdentifier, newUrl, newTitle, newLanguage) {
         DISQUS.reset({
             reload: true,
             config: function() {
@@ -44,13 +44,21 @@ $(document).ready(function() {
         });
     };
 
+    function makeNameNice(personName){
+        var pn = personName.replace("-", " ").toProperCase();
+        if (pn.split(" ")[0] = "Jr"){
+            return ["JR " + pn.split(" ")[1]];
+        }else{
+            return pn;
+        }
+    };
+
     function injectAperson(personName) {
         $("#items-receiver").load(personName + ".html #items");
         $("#interview-receiver").load(personName + ".html #interview");
         $("#portrait-receiver").load(personName + ".html #portrait");
         $("#svg-receiver").load(personName + ".html #svg", reRegisterEvents);
-        var titleName = personName.replace("-", " ").toProperCase();
-        $(".name-bar h1" ).html(titleName);
+        $(".name-bar h1" ).html(makeNameNice(personName));
         //$(".name-bar span").html("<img src='"+personName+"/portrait.jpg'>");
         ga('send', 'event', 'new person', personName);
     }
