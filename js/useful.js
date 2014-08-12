@@ -90,7 +90,7 @@ $(document).ready(function() {
         // reset the comments so that they point to the right page
         var pageName = selectedValue.split(".")[0];
         document.location.hash = prebanger(pageName);
-        resetD(pageName, "http://notionparallax.github.io/kitGrids/#!" + pageName, pageName, 'en');
+        resetD(pageName, "http://cfkitgrids.com/#!" + pageName, pageName, 'en');
 
         $('nav').toggleClass('nav-visible');
     });
