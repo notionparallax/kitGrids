@@ -60,7 +60,7 @@ nav {
         }
         &:first-child {
             flex-basis: 400px;
-            height: 380px;
+            height: 300px;
             h2{
                 display:none;
             }
@@ -68,6 +68,11 @@ nav {
                 margin-top: 1.4em;
                 font-size: 4em;
             }
+            &:hover{
+            -webkit-box-shadow: none;
+            -moz-box-shadow:    none;
+            box-shadow:         none;
+        }
         }
     }
 }
